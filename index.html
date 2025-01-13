@@ -323,8 +323,9 @@
       min-height: 100vh;
       text-align: center;
       margin: 20px;
-
+      padding-bottom: 50px;
     }
+
     header img {
       max-width: 100%;
       height: auto;
@@ -346,12 +347,32 @@
       bottom: 0;
     }
 
+    footer a {
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        margin: 10px;
+      }
+
+      footer {
+        position: static;
+      }
+
+      footer a {
+        font-size: 14px;
+      }
+    }
+
     .hidden {
       visibility: hidden;
       height: 0;
       overflow: hidden;
     }
-</style>
+  </style>
+
 
 <title>a low effort quality brand</title>
 </head>
