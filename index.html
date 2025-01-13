@@ -339,13 +339,15 @@
     }
 
     footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
       background-color: #ffffff;
       text-align: center;
       padding: 10px;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
-    }
+      z-index: 10;
+        }
 
     footer a {
       font-size: 16px;
@@ -355,10 +357,6 @@
     @media (max-width: 600px) {
       body {
         margin: 10px;
-      }
-
-      footer {
-        position: static;
       }
 
       footer a {
