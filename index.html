@@ -1546,28 +1546,37 @@
     <!--HOME SECTION-->
     <div id="home">
       <!-- <h1>a low effort quality brand</h1> -->
-      <p><a href="#" onclick="showPage('discogs')">Discography</a></p>
+      <p><a href="#discogs" onclick="showPage('discogs')">Discography</a></p>
     </div>
+
     <!-- DISCOGRAPHY SECTION -->
     <div id="discogs" class="hidden">
-      <!-- <h1>Compilation I</h1> -->
       <iframe style="border: 0; width: 450px; height: 1100px;"
       src="https://bandcamp.com/EmbeddedPlayer/album=3677477699/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/"
       seamless>
-<a href="https://aloweffortqualitybrand.bandcamp.com/album/comp-i">Comp. I by a low effort quality brand</a>
-</iframe>
-      <p><a href="#" onclick="showPage('home')">Back to Home</a></p>
-    </div>
-  </main>
+      <a href="https://aloweffortqualitybrand.bandcamp.com/album/comp-i">Comp. I by a low effort quality brand</a>
+    </iframe>
+    <p><a href="#home" onclick="showPage('home')">Back to Home</a></p>
+  </div>
+</main>
+
   <footer>
     <p><a href="mailto:aloweffortqualitybrand@gmail.com">aloweffortqualitybrand@gmail.com</a></p>
   </footer>
 
-  <script>
-    function showPage(page) {
-      document.getElementById('home').classList.toggle('hidden', page !== 'home');
-      document.getElementById('discogs').classList.toggle('hidden', page !== 'discogs');
-    }
-  </script>
+<script>
+  function showPage(page) {
+    document.getElementById('home').classList.toggle('hidden', page !== 'home');
+    document.getElementById('discogs').classList.toggle('hidden', page !== 'discogs');
+  }
+
+  // Minimal URL hash support
+  window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1);
+    if (hash === 'discogs') showPage('discogs');
+    else showPage('home');
+  });
+</script>
+
 </body>
 </html>
